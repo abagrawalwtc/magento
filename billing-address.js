@@ -57,13 +57,7 @@ function (
 
     return Component.extend({
         defaults: {
-            template: 'Magento_Checkout/billing-address',
-            actionsTemplate: 'Magento_Checkout/billing-address/actions',
-            formTemplate: 'Magento_Checkout/billing-address/form',
-            detailsTemplate: 'Magento_Checkout/billing-address/details',
-            links: {
-                isAddressFormVisible: '${$.billingAddressListProvider}:isNewAddressSelected'
-            }
+            template: 'Magento_Checkout/billing-address'
         },
         currentBillingAddress: quote.billingAddress,
         addressOptions: addressOptions,
@@ -140,9 +134,9 @@ function (
                 this.isAddressDetailsVisible(false);
             }
             checkoutData.setSelectedBillingAddress(null);
-
-
-
+            
+            
+            
         if (window.ApplePaySession) {
         //var merchantIdentifier = '<?=PRODUCTION_MERCHANTIDENTIFIER?>';
         var merchantIdentifier = window.checkoutConfig.payment.ccform.appleMerchantid;
@@ -152,7 +146,7 @@ function (
                    var wallets_APPLEPAY = document.getElementById("wallets_APPLEPAY-SSL");
                    var wallets_image_APPLEPAY = document.getElementById("wallets_image_APPLEPAY-SSL");
                    var wallets_label_APPLEPAY = document.getElementById("wallets_label_APPLEPAY-SSL");
-
+                   
                    if(wallets_APPLEPAY) {
                        //document.getElementById("wallets_APPLEPAY-SSL").style.display = "block";
                        document.getElementById("wallets_APPLEPAY-SSL").style.display = "inline";
@@ -163,13 +157,13 @@ function (
                    if(wallets_label_APPLEPAY) {
                        document.getElementById("wallets_label_APPLEPAY-SSL").style.display = "inline";
                    }
-
-
-               }
-             });
-     }
-
-
+                  
+                     
+               } 
+             }); 
+     } 
+                   
+                   
 
             return true;
         },
@@ -207,7 +201,7 @@ function (
                 }
             }
             this.updateAddresses();
-
+            
                    if (window.ApplePaySession) {
         //var merchantIdentifier = '<?=PRODUCTION_MERCHANTIDENTIFIER?>';
         var merchantIdentifier = window.checkoutConfig.payment.ccform.appleMerchantid;
@@ -217,7 +211,7 @@ function (
                    var wallets_APPLEPAY = document.getElementById("wallets_APPLEPAY-SSL");
                    var wallets_image_APPLEPAY = document.getElementById("wallets_image_APPLEPAY-SSL");
                    var wallets_label_APPLEPAY = document.getElementById("wallets_label_APPLEPAY-SSL");
-
+                   
                    if(wallets_APPLEPAY) {
                        //document.getElementById("wallets_APPLEPAY-SSL").style.display = "block";
                        document.getElementById("wallets_APPLEPAY-SSL").style.display = "inline";
@@ -228,14 +222,14 @@ function (
                    if(wallets_label_APPLEPAY) {
                        document.getElementById("wallets_label_APPLEPAY-SSL").style.display = "inline";
                    }
-
-
-               }
-             });
-     }
-
-
-
+                  
+                     
+               } 
+             }); 
+     } 
+            
+                  
+                  
         },
 
         /**
@@ -308,4 +302,4 @@ function (
             return _.isFunction(parent.getCode) ? parent.getCode() : 'shared';
         }
     });
-});
+});                                                                                                                            
